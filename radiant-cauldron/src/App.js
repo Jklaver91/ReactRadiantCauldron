@@ -1,13 +1,17 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavLogo from './Assets/Logos/NavLogo.png';
+import './App.css';
 
 function App() {
   return (
-    <Navbar bg="light" expand="lg">
+    <div className="App">
+       <Navbar className='nav' expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Radiant Cauldron</Navbar.Brand>
+      <img className='navlogo' src={NavLogo} alt="NavLogo" />
+        <Navbar.Brand className='mx-3' href="/">Radiant Cauldron</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -24,6 +28,9 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
+
+    </div>
   );
 }
 
