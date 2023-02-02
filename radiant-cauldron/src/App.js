@@ -1,9 +1,19 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavLogo from './Assets/Logos/NavLogo.png';
 import './App.css';
+
+//pages
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Events from './Pages/Events';
+import Vendor from './Pages/Vendor';
+
 
 function App() {
   return (
@@ -19,6 +29,7 @@ function App() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/events">Upcoming Events</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
@@ -29,6 +40,15 @@ function App() {
       </Container>
     </Navbar>
     
+    <Router>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/events" element={<Events />} />
+              <Route exact path="/about" element={<About />} />
+              <Route exact path="/vendor" element={<Vendor />} />
+              <Route exact path="/contact" element={<Contact />} />
+            </Routes>
+    </Router>     
 
     </div>
   );

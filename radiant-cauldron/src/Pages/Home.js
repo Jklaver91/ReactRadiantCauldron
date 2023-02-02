@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Logo from './Assets/Logos/Base.png';
-import Divider from './Assets/Logos/Divider.png';
-import './App.css';
-import Divine from './Assets/Logos/Divine.png';
-import fbpink from './Assets/Logos/fbpink.jpg'
+import Logo from '.././Assets/Logos/Base.png';
+import Divider from '.././Assets/Logos/Divider.png';
+import '.././App.css';
+import Divine from '.././Assets/Logos/Divine.png';
+import fbpink from '.././Assets/Logos/fbpink.jpg'
 
 function Home() {
     return (
