@@ -8,8 +8,8 @@ import NavLogo from './Assets/Logos/NavLogo.png';
 import './App.css';
 
 //pages
-import Home from './Pages/Home';
 import About from './Pages/About';
+import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Events from './Pages/Events';
 import Vendor from './Pages/Vendor';
@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="App">
        <Navbar className='nav' expand="lg">
-      <Container fluid>
-      <img className='navlogo' src={NavLogo} alt="NavLogo" />
+      <Container fluid className='nav'>
+      <img className='navlogo mx-3' src={NavLogo} alt="NavLogo" />
         <Navbar.Brand className='mx-3' href="/">Radiant Cauldron</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -32,8 +32,8 @@ function App() {
 
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/events">Upcoming Events</Nav.Link>
-            <Nav.Link href="/about">About Us</Nav.Link>
             <Nav.Link href="/vendor">Vendor Info</Nav.Link>
+            <Nav.Link href="/about">About Us</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -49,7 +49,7 @@ function App() {
               <Route exact path="/contact" element={<Contact />} />
             </Routes>
     </Router>     
-
+    
     </div>
   );
 }

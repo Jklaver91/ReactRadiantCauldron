@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/black-chancery');
-
+body {
+  background-color: #808A59;
+}
 .App {
   text-align: center;
   background-color: #808A59;
@@ -10,6 +12,7 @@ img {
   height: 100%;
 }
 .navbar-brand, .nav-link {
+  background-color: #7E5764;
   color: #EBE2D2;
 }
 .nav {
