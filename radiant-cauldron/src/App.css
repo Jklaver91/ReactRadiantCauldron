@@ -41,7 +41,9 @@ img {
   width: 15%;
   height: 100%;
 }
-
+.concard{
+  background-color: #EBE2D2;
+}
 .App-link {
   color: #61dafb;
 }

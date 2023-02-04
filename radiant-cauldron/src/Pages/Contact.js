@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '.././App.css';
 import Divider from '.././Assets/Logos/Divider.png';
 import Card from 'react-bootstrap/Card';
-import fbpink from '.././Assets/Logos/fbpink.jpg'
+import fbgreen from '.././Assets/Logos/fbgreen.jpg'
+import fbbrown from '.././Assets/Logos/fbbrown.jpg'
 import { Form, Col, Button } from 'react-bootstrap';
 
 const Contact = () => {
@@ -73,8 +74,8 @@ const Contact = () => {
         <img className='divider' src={Divider} alt="Divider" />
         
         <div className="row">
-        <Card className="col-3 mx-auto" style={{ width: '18rem' }}>
-        <Card.Link href="https://www.facebook.com/RadiantCauldron"><img className="mt-2" variant="top"  src={fbpink}></img></Card.Link>
+        <Card className="col-3 mx-auto concard" style={{ width: '18rem' }}>
+        <Card.Link href="https://www.facebook.com/RadiantCauldron"><img className="mt-2" variant="top"  src={fbgreen} alt="facebook logo green"></img></Card.Link>
           <Card.Body>
             <Card.Title>Facebook Community Page!</Card.Title>
             <Card.Text>
@@ -83,8 +84,8 @@ const Contact = () => {
           </Card.Body>
         </Card>
 
-        <Card className="col-3 mx-auto" style={{ width: '18rem' }}>
-            <Card.Link href="https://www.facebook.com/groups/radiantcauldronvendors/"><img className="mt-2" variant="top"  src={fbpink}></img></Card.Link>
+        <Card className="col-3 mx-auto concard" style={{ width: '18rem' }}>
+            <Card.Link href="https://www.facebook.com/groups/radiantcauldronvendors/"><img className="mt-2" variant="top"  src={fbbrown} alt="facebook logo brown"></img></Card.Link>
           <Card.Body>
             <Card.Title>Facebook Vendor Page!</Card.Title>
             <Card.Text>
