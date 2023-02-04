@@ -1,13 +1,17 @@
+//Email imports
 import React from "react";
+//Styling imports
+import { Form, Col, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '.././App.css';
 import Divider from '.././Assets/Logos/Divider.png';
 import Card from 'react-bootstrap/Card';
 import fbgreen from '.././Assets/Logos/fbgreen.jpg'
 import fbbrown from '.././Assets/Logos/fbbrown.jpg'
-import { Form, Col, Button } from 'react-bootstrap';
+
 
 const Contact = () => {
+  //Holds the user data
   const [formData, updateFormData] = React.useState({
     name: "",
     email: "",
@@ -15,6 +19,7 @@ const Contact = () => {
     query: ""
   });
 
+  //updates the object when value changes
   const handleChange = (e) => {
     updateFormData({
       ...formData,
@@ -22,6 +27,7 @@ const Contact = () => {
     });
   };
 
+  //prevents default submission and holds out key info for email js to send the data to an email and how to format it.
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Thank you for your message. Your query has been forwarded.`);
@@ -32,6 +38,7 @@ const Contact = () => {
     console.log(formData);
   };
 
+  //email js sends everything out and returns a success to user
   const sendFeedback = (serviceID, templateId, variables) => {
     window.emailjs.send(
       serviceID, templateId, variables
@@ -47,6 +54,7 @@ const Contact = () => {
       <h1 className="text">Contact us!</h1>
 
       <div>
+        {/* all form section for sending an email from the page with emailjs */}
         <Form className="col-6 mx-auto rounded contact">
           <Form.Group className="mx-3" as={Col} controlId="formGridName">
             <Form.Label>Name*</Form.Label>
@@ -73,6 +81,7 @@ const Contact = () => {
         </Form >
         <img className='divider' src={Divider} alt="Divider" />
         
+        {/* facebook community */}
         <div className="row">
         <Card className="col-3 mx-auto concard" style={{ width: '18rem' }}>
         <Card.Link href="https://www.facebook.com/RadiantCauldron"><img className="mt-2" variant="top"  src={fbgreen} alt="facebook logo green"></img></Card.Link>
@@ -84,6 +93,7 @@ const Contact = () => {
           </Card.Body>
         </Card>
 
+      {/* facebook vendors. */}
         <Card className="col-3 mx-auto concard" style={{ width: '18rem' }}>
             <Card.Link href="https://www.facebook.com/groups/radiantcauldronvendors/"><img className="mt-2" variant="top"  src={fbbrown} alt="facebook logo brown"></img></Card.Link>
           <Card.Body>

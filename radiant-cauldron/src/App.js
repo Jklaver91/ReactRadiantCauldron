@@ -1,5 +1,8 @@
+//React imports
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// styling
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,6 +21,7 @@ import Vendor from './Pages/Vendor';
 function App() {
   return (
     <div className="App">
+      {/* nav bar */}
        <Navbar className='nav' expand="lg">
       <Container fluid className='nav'>
       <img className='navlogo mx-3' src={NavLogo} alt="NavLogo" />
@@ -29,7 +33,7 @@ function App() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-
+            {/* links to pages */}
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/events">Upcoming Events</Nav.Link>
             <Nav.Link href="/vendor">Vendor Info</Nav.Link>
@@ -40,6 +44,7 @@ function App() {
       </Container>
     </Navbar>
     
+    {/* routes */}
     <Router>
             <Routes>
               <Route exact path="/" element={<Home />} />
